@@ -1,0 +1,13 @@
+# Simple test script to see how robust a function I have built
+mymatrix <- makeCacheMatrix()
+mymatrix$set(matrix(sample.int(15, 5*5, TRUE), 5, 5))
+cacheSolve(mymatrix)
+cacheSolve(mymatrix)
+mymatrix$set(matrix(sample.int(15, 5*5, TRUE), 5, 5))
+cacheSolve(mymatrix)
+cacheSolve(mymatrix)
+mymatrix$set(matrix(sample.int(15, 3*3, TRUE), 3, 3))
+cacheSolve(mymatrix)
+cacheSolve(mymatrix)
+mymatrix$set(mymatrix$get())
+cacheSolve(mymatrix)
